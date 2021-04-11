@@ -1,0 +1,17 @@
+<h1>一覧表</h1>
+
+<!--
+<ul>
+    <% @urls.each do |url| %>
+        <li>
+            <%= url.url %>
+        </li>
+    <% end %>
+</ul>
+-->
+
+<table border="1">
+    <% @urls.each do |url| %>
+        <tr><td><a href="<%= url.url %>" target="_blank"><%= url.title %></a></td></tr>
+    <% end %>
+</table>
