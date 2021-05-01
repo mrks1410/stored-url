@@ -6,8 +6,22 @@
 -->
 
 <Modules>
+    <!-- for example
     <Module>
         <ModuleName>Example</ModuleName>
         <ClassName>Example</ClassName>
+    </Module>
+    -->
+
+    <!-- add here your custom modules. -->
+
+    <!--
+        DO NOT EDIT BELOW LINES.
+        A module that is imported by default.
+        If added your cutom module, it's not working because the Regexp of this module as .*.
+    -->
+    <Module>
+        <ModuleName>Base</ModuleName>
+        <ClassName>Parse</ClassName>
     </Module>
 </Modules>

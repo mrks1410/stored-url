@@ -41,7 +41,7 @@ module ParseModule
         def parse(uri)
             @module_set.each do |mod|
                 if mod.match_check uri
-                    mod.parse uri
+                    return mod.parse uri
                 end
                 # base module return
             end

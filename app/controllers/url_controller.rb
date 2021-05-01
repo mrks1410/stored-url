@@ -18,28 +18,13 @@ class UrlController < ApplicationController
     end
 
     def get_title(url)
-        opt = {}
-        opt['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'
-        
+        ParseModule::ParseModule.instance.parse url
+=begin        
         case url
         when /^https:\/\/twitter.com\/.*/ then
             return 'twitter.com'
         else
-            begin
-                charset = nil
-                html = URI.open(url) do |f|
-                    charset = f.charset
-                    f.read
-                end
-                doc = Nokogiri::HTML(html, nil, charset)
-                title = doc.title
-                puts title
-                return title
-            rescue OpenURI::HTTPError => error
-                error.io.status
-            rescue => error
-                puts error
-            end
         end
+=end
     end
 end
