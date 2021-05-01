@@ -10,8 +10,17 @@
 </ul>
 -->
 
-<table border="1">
-    <% @urls.each do |url| %>
-        <tr><td><a href="<%= url.url %>" target="_blank"><%= url.title %></a></td></tr>
-    <% end %>
+<%= stylesheet_pack_tag "application", 'data-turbolinks-track': 'reload' %>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>WEBページタイトル</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @urls.each do |url| %>
+            <tr><td><a href="<%= url.url %>" target="_blank"><%= url.title %></a></td></tr>
+        <% end %>
+    </tbody>
 </table>
