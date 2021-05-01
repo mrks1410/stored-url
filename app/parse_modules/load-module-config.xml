@@ -1,0 +1,13 @@
+<!-- for template
+    <Module>
+        <ModuleName></ModuleName>
+        <ClassName></ClassName>
+    </Module>
+-->
+
+<Modules>
+    <Module>
+        <ModuleName>Example</ModuleName>
+        <ClassName>Example</ClassName>
+    </Module>
+</Modules>
